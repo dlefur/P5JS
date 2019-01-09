@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Sound</title>
+		<script src="../libraries/p5.js"></script>      <!-- librairie p5.js -->
+		<script src="../libraries/p5.dom.js"></script>
+		<script src="../libraries/p5.sound.js"></script>
+		<script src="sketch.js"></script>
+		<script src="../libraries/prism.js"></script>   <!-- visualisation du code -->
+		<link href="../CSS/prism.css" rel="stylesheet" />
+		<link href="../CSS/perso.css" rel="stylesheet" />
+	</head>
+	<body>
+		<h3>
+		Charger et jouer un fichier audio
+		</h3>
+		<p>
+			Cliquer dans le canvas pour jouer ou mettre en pause.
+			<br>
+			Utiliser les flèches UP ou DOWN pour le volume.
+		</p>
+		<div id="sketch-holder" class="sketch_holder" class="enligne">
+			<!-- Our sketch will go here! -->
+		</div>
+		<button id="buttonPlay"><img src="../Images/play_pause.png" width=100 height=100></button>
+		<button id="buttonStop"><img src="../Images/stop.jpeg" width=100 height=100></button>
+		
+		<div id="sliderRate-holder" class="enligne">
+			<input id="sliderRate" type="range" min="0.5" max="1.5" value="1" step="0.05" class="slider">
+			<p id="pRate"></p>
+
+		</div>
+		<div id="sliderPan-holder" class="enligne">
+			<input id="sliderPan" type="range" min="-1" max="1" value="0" step="0.1" class="slider">
+			<p id="pPan"></p>
+		</div>
+		
+	</body>
+</html>

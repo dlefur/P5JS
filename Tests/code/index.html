@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Visualisation de code dans la page HTML</title>
+		<script src="../libraries/p5.js"></script>      <!-- librairie p5.js -->
+		<script src="../libraries/p5.dom.js"></script>
+		<script src="../libraries/p5.sound.js"></script>
+		<script src="sketch.js"></script>               <!-- script personnel -->
+		<script src="../libraries/prism.js"></script>   <!-- visualisation du code -->
+		<link href="../CSS/prism.css" rel="stylesheet" />
+		<link href="../CSS/perso.css" rel="stylesheet" />
+	</head>
+	<body>
+		<h3>
+		Visualisation de code dans la page HTML
+		</h3>
+		<p>
+			On utilise les fichiers du site <a href="https://prismjs.com/" target="_blank">https://prismjs.com/</a>.
+			<br>
+			Pour cela, on télécharge une version des fichiers prism.js et prism.css que l'on place dans son projet.
+			<br>
+			Dans l'entête du fichier html, on rajoute les lignes suivantes.
+		</p>
+
+		<pre>
+			    <code  class="language-html">
+&lt;script src="../libraries/prism.js">&lt;/script>  &lt;!-- visualisation du code -->
+&lt;link href="../CSS/prism.css" rel="stylesheet" />
+&lt;link href="../CSS/perso.css" rel="stylesheet" />
+			    </code>
+		</pre>
+
+		<p>
+			On y retrouve les liens vers les deux fichiers ainsi que certainement un lien vers un fichier CSS personnel.
+		</p>
+
+		<h3>
+			Autour du bloc à insérer
+		</h3>
+		<p>
+			On utilisera les balise pre et code et on spécifiera le langage à utiliser pour la coloration syntaxique.
+			<br>
+			Voici un exemple.
+		</p>
+
+		<pre>
+			<code class="language-html">
+    &lt;pre>
+    	&lt;code class="language-js">
+function setup() {
+  var canvas = createCanvas(100, 100);
+ 
+  // Move the canvas so it’s inside our < div id="sketch-holder"  >.
+  canvas.parent('sketch-holder');
+
+  background(255, 0, 200);
+}
+       &lt;/code>
+   &lt;/pre>	
+			</code>
+		</pre>
+
+		<p>
+			Voici le résultat :
+		</p>
+		    <pre>
+    	<code class="language-js">
+function setup() {
+  var canvas = createCanvas(100, 100);
+ 
+  // Move the canvas so it’s inside our < div id="sketch-holder"  >.
+  canvas.parent('sketch-holder');
+
+  background(255, 0, 200);
+}
+       </code>
+   </pre>
+
+
+		<h3>
+			Une astuce pour le code HTML
+		</h3>
+		<p>
+			Pour éviter que le code html soit exécuter, remplacer les "<" par "& l t ;" (sans espaces).
+		</p>
+
+
+	</body>
+</html>

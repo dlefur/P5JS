@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>Inclusion d'un canvas dans une page</title>
+
+	<script src="../libraries/p5.js"></script>      <!-- librairie p5.js -->
+	<script src="../libraries/p5.dom.js"></script>
+	<script src="../libraries/p5.sound.js"></script>
+
+	<script src="sketch.js"></script> 
+
+	<script src="../libraries/prism.js"></script>   <!-- visualisation du code -->
+	<link href="../CSS/prism.css" rel="stylesheet" />
+	<link href="../CSS/perso.css" rel="stylesheet" />
+
+</head>
+  <body>
+  	<h3>
+  		Exemple d'inclusion de plusieurs canvas dans une page
+  	</h3>
+
+    <p>Le canvas vient se mettre ci-dessous.</p>
+
+    <div id="sketch1-holder" class="sketch_holder">
+      <!-- Our sketch will go here! -->
+    </div>
+
+    <p>La deuxième inclusion ci-dessous.</p>
+
+     <div id="sketch2-holder" class="sketch_holder">
+      <!-- Our sketch will go here! -->
+    </div>   
+
+    <h3>
+    	Exemplde de code js
+    </h3>
+    Pour ne pas avoir deux fonctions setup, la programmation de chaque canvas change.
+    <br>
+    Voici le code du premier canvas.
+
+    <pre>
+    	<code class="language-js">
+//////////////////////////////////// La fonction du sketch
+var sketch1 = function(p) {
+    var ang = 0;
+
+    //////////////////////////////////////////////////////
+    p.setup = function() {
+        p.createCanvas(200, 200);
+        p.fill(255);
+
+    }
+
+    //////////////////////////////////////////////////////
+    p.draw = function() {
+        p.background(0);
+        p.push();
+        p.translate(p.width / 2, p.height / 2);
+        p.rotate(p.radians(ang));
+        roue();
+        p.pop();
+        p.push();
+        p.translate(48, 48);
+        p.rotate(p.radians(-4 * ang));
+        p.rectMode(p.CENTER);
+        p.rect(0, 0, 16, 16);
+        p.pop();
+        if (ang >= 360) {
+            ang = 0;
+        } else {
+            ang = ang + 1;
+        }
+
+    }
+
+    function roue() {
+        p.ellipse(0, 0, 20, 20);
+        for (var i = 0; i < 8; i++) {
+            p.rotate(p.radians(45 * i));
+            p.rect(12, -5, 50, 10);
+        }
+
+    }
+}
+
+///////////////// Le constructeur
+var roue = new p5(sketch1, "sketch1-holder");
+
+    	</code>
+    </pre>
+
+  </body>
+</html>

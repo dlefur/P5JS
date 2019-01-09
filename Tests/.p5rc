@@ -1,0 +1,23 @@
+{
+  "name": "Tests",
+  "projects": [
+    "inclusion",
+    "code",
+    "sauvegarde",
+    "inclusion_double",
+    "time",
+    "timer",
+    "serpent",
+    "drop",
+    "sound",
+    "select",
+    "shape",
+    "fft",
+    "mapbox",
+    "einstein",
+    "ml5",
+    "rebond",
+    "textballs",
+    "textinput"
+  ]
+}

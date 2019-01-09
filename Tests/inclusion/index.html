@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>Inclusion d'un canvas dans une page</title>
+
+	<script src="../libraries/p5.js"></script>      <!-- librairie p5.js -->
+	<script src="../libraries/p5.dom.js"></script>
+	<script src="../libraries/p5.sound.js"></script>
+
+	<script src="sketch.js"></script>               <!-- script personnel -->
+
+	<script src="../libraries/prism.js"></script>   <!-- visualisation du code -->
+	<link href="../CSS/prism.css" rel="stylesheet" />
+	<link href="../CSS/perso.css" rel="stylesheet" />
+
+</head>
+  <body>
+  	<h3>
+  		Exemple d'inclusion d'un canvas au sein d'une page
+  	</h3>
+
+    <p>Le canvas vient se mettre ci-dessous.</p>
+
+    <div id="sketch-holder" class="sketch_holder">
+      <!-- Our sketch will go here! -->
+    </div>
+
+    <p>Le contenu de la page continue maintenant.</p>
+
+    <hr>
+
+    <h3>
+      Le code js
+	</h3>
+
+
+    <pre>
+    	<code class="language-js">
+function setup() {
+  var canvas = createCanvas(100, 100);
+ 
+  // Move the canvas so it’s inside our < div id="sketch-holder"  >.
+  canvas.parent('sketch-holder');
+
+  background(255, 0, 200);
+}
+       </code>
+   </pre>
+
+   <hr>
+
+   <h3>
+   	Le code CSS
+   </h3>
+
+   <pre>
+    	<code class="language-css">
+/*pour le body*/
+body 
+{
+    margin: 0;
+	margin-left:60px;
+	padding:0;
+}
+
+/*Pour le code*/
+code[class*="language-"],
+pre[class*="language-"] {
+ width : 50%;
+}
+
+/*Pour le canvas*/
+#sketch-holder
+{
+
+	text-align: left;
+    margin-left: 100px;
+    margin-top : 50px;
+    margin-bottom: 50px;
+}
+       </code>
+   </pre>
+
+  </body>
+</html>

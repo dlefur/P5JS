@@ -1,0 +1,45 @@
+/*pour le body*/
+body 
+{
+    margin: 0;
+	margin-left:60px;
+	  padding:0;
+}
+
+/*Pour le code*/
+code[class*="language-"],
+pre[class*="language-"] 
+{
+ 	width : 50%;
+}
+
+/*Pour les canvas*/
+.sketch_holder
+{
+
+	text-align: left;
+    margin-left: 100px;
+    margin-top : 50px;
+    margin-bottom: 50px;
+}
+
+/*Pour la date*/
+.date_holder
+{
+	font-size: 24px; 
+	color : red;
+	font-weight: bold;
+}
+
+button {
+	background-color: white;
+	margin-left: 100px;
+}
+
+.enligne {
+	display : flex;
+}
+
+p {
+	white-space: pre-line;
+}

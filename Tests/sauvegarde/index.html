@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>Inclusion d'un canvas dans une page</title>
+
+	<script src="../libraries/p5.js"></script>      <!-- librairie p5.js -->
+	<script src="../libraries/p5.dom.js"></script>
+	<script src="../libraries/p5.sound.js"></script>
+
+	<script src="sketch.js"></script>               <!-- script personnel -->
+
+	<script src="../libraries/prism.js"></script>   <!-- visualisation du code -->
+	<link href="../CSS/prism.css" rel="stylesheet" />
+	<link href="../CSS/perso.css" rel="stylesheet" />
+
+</head>
+  <body>
+  	<h3>
+  		Exemple de sauvegarde d'un canvas
+  	</h3>
+
+    <p>
+    	Sur l'exemple ci-desous, déplacer le curseur pour obtenir votre image souhaitée.
+    	<br>
+    	Taper sur la touche s et S pour sauvegarder
+    </p>
+
+    <div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+    </div>
+
+    <h3>
+    	Exemple de code
+    </h3>
+
+    <pre>
+    	<code class="language-js">
+// sauvegarde quand on appuie sur s ou S
+function keyTyped() 
+{
+ if (key=='s' || key=='S') save("image_p5js.png");
+}    		
+    	</code>
+    </pre>
+
+  </body>
+</html>
