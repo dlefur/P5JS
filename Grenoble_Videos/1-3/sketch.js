@@ -5,7 +5,12 @@ var maVideo;
 function setup() 
 {
     maVideo=createVideo("../Videos/fingers.webm");
-    maVideo.loop();
+    //maVideo.loop();
+
+}
+
+function mousePressed() {
+	maVideo.loop();
 }
 
 function draw() 
