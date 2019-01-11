@@ -1,5 +1,5 @@
 # P5JS
-Dans ce dépôt, on trouvera les sources des exemples créés mais aussi un **wiki** expliquant la démarche pour débuter.
+Dans ce dépôt, on trouvera les sources des exemples créés mais aussi un **[wiki](https://github.com/dlefur/P5JS/wiki)** expliquant la démarche pour débuter.
 
 Chaque collection est indépendante des autres. On peut directement les ouvrir localement avec [p5-manager](https://www.npmjs.com/package/p5-manager). Se placer dans le dossier téléchargé de la collection et depuis un terminal, lancer la commande `p5 s`.
 
